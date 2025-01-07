@@ -9,7 +9,7 @@ slug: /shaclviz
 - each property shape has a `sh:path` pointing to a single property.
 
 <table>
-<tr style="vertical-align: top "><td>
+<tr><td>
 Instead of SHACL-based diagrams ...
 
 ![](shaclviz-example-before.png)
