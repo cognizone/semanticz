@@ -6,7 +6,7 @@ sidebar_position: 2
 
 - Download the SHACL Viz executable JAR:
 ```bash
-curl -o shaclviz.jar https://repo1.maven.org/maven2/zone/cogni/semanticz/semanticz-shaclviz/1.0.1/semanticz-shaclviz-1.0.1-executable.jar
+curl -o shaclviz.jar https://repo1.maven.org/maven2/zone/cogni/semanticz/semanticz-shaclviz/1.0.2/semanticz-shaclviz-1.0.2-executable.jar
 ```
 
 - The following command (run using Java 17+) creates the diagram of the [ACQF data model](https://data.acqf-qcp.africa/) (for up-to-date version check the website) preconfiguring [classes to be visualised as fields](./acqf-field-query.rq):
