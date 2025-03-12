@@ -55,6 +55,49 @@ const config: Config = {
         ],
     ],
 
+    headTags: [{
+        tagName: 'script',
+        attributes: {
+            type: 'application/ld+json',
+        },
+        innerHTML: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Project",
+                "name": "SemantiCZ",
+                "description": "SemantiCZ is a set of lean, tested and documented open-source libraries and tools to speed up your semantic web projects.",
+                "url": "https://cognizone.github.io/semanticz/",
+                "creator": {
+                    "@type": "Organization",
+                    "name": "cognizone",
+                    "url": "https://cogni.zone"
+                },
+                "hasPart": [
+                    {
+                        "@type": "SoftwareSourceCode",
+                        "name": "ShaclViz",
+                        "description": "ShaclViz draws a SHACL diagram of a SHACL data model.",
+                        "url": "https://cognizone.github.io/semanticz/docs/shaclviz",
+                        "programmingLanguage": "Kotlin"
+                    },
+                    {
+                        "@type": "SoftwareSourceCode",
+                        "name": "Connectors",
+                        "description": "Connectors serve to unify access to RDF stores from JVM languages.",
+                        "url": "https://example.com/connectors",
+                        "programmingLanguage": "Java"
+                    },
+                    {
+                        "@type": "SoftwareSourceCode",
+                        "name": "IRIGenerator",
+                        "description": "IRIGenerator is a tool for generating and renaming IRIs in semantic web applications.",
+                        "url": "https://example.com/irigenerator",
+                        "programmingLanguage": "Java"
+                    }
+                ]
+            }
+        ),
+    }],
+
     markdown: {
         mermaid: true,
     },
@@ -87,6 +130,7 @@ const config: Config = {
         prism: {
             theme: prismThemes.github,
             darkTheme: prismThemes.dracula,
+            additionalLanguages: ['java','turtle','bash']
         },
     } satisfies Preset.ThemeConfig,
 };

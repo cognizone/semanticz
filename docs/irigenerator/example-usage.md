@@ -1,10 +1,19 @@
 ---
 sidebar_position: 2
 ---
+import DependencyTabs from '@site/src/components/DependencyTabs';
 
 # Example Usage
 
-This piece of code
+1. Add the dependency to your project:
+
+<DependencyTabs
+groupId="zone.cogni.semanticz"
+artifactId="semanticz-connectors-spring"
+version="2.0.0"
+/>
+
+2. Use the `IriGeneratorCalculator` to convert the model with temporary IRIs into the model with permanent IRIs by implementing
 
 ```java
     final IriGeneratorCalculator sut = new IriGeneratorCalculator(
@@ -22,7 +31,7 @@ This piece of code
     );
 ```
 
-and the configuration (loaded as `uriGeneratorsResource`)
+and the configuring (loaded as `uriGeneratorsResource`)
 
 ```json
 {
@@ -39,12 +48,11 @@ and the configuration (loaded as `uriGeneratorsResource`)
         }
     ]
 }
-```
+``` 
 
+3. Upon running this setup will transform the model
 
-will transform the model
-
-```
+```turtle
 @prefix eczm: <https://example.cogni.zone/model#> .
 
 <https://example.org/person/tempid/1> a eczm:Person ;
@@ -53,7 +61,7 @@ will transform the model
 
 into
 
-```
+```turtle
 @prefix eczm: <https://example.cogni.zone/model#> .
 
 <https://data.cogni.zone/person/123-456-789> a eczm:Person ;
