@@ -52,7 +52,7 @@ and the configuring (loaded as `uriGeneratorsResource`)
 
 3. Upon running this setup will transform the model
 
-```
+```turtle
 @prefix eczm: <https://example.cogni.zone/model#> .
 
 <https://example.org/person/tempid/1> a eczm:Person ;
@@ -61,7 +61,7 @@ and the configuring (loaded as `uriGeneratorsResource`)
 
 into
 
-```
+```turtle
 @prefix eczm: <https://example.cogni.zone/model#> .
 
 <https://data.cogni.zone/person/123-456-789> a eczm:Person ;
