@@ -1,18 +1,17 @@
 ---
 sidebar_position: 3
 ---
-import DependencyTabs from '@site/src/components/DependencyTabs';
+import DependencyTabs, { Dependency }  from '@site/src/components/DependencyTabs';
 
 # Example Usage
 
 
 1. Add the dependency to your project:
 
-<DependencyTabs
-groupId="zone.cogni.semanticz"
-artifactId="semanticz-connectors-spring"
-version="2.0.0"
-/>
+<DependencyTabs>
+    <Dependency groupId="zone.cogni.semanticz" artifactId="semanticz-connectors-common" version="2.0.0"/>
+    <Dependency groupId="zone.cogni.semanticz" artifactId="semanticz-connectors-spring" version="2.0.0"/>
+</DependencyTabs>
 
 
 2. Configure connectors: `src/main/resources/application.yml`

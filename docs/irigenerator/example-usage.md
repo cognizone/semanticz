@@ -1,17 +1,15 @@
 ---
 sidebar_position: 2
 ---
-import DependencyTabs from '@site/src/components/DependencyTabs';
+import DependencyTabs, {Dependency} from '@site/src/components/DependencyTabs';
 
 # Example Usage
 
 1. Add the dependency to your project:
 
-<DependencyTabs
-groupId="zone.cogni.semanticz"
-artifactId="semanticz-connectors-spring"
-version="2.0.0"
-/>
+<DependencyTabs>
+    <Dependency groupId="zone.cogni.semanticz" artifactId="semanticz-connectors-spring" version="2.0.0"/>
+</DependencyTabs>
 
 2. Use the `IriGeneratorCalculator` to convert the model with temporary IRIs into the model with permanent IRIs by implementing
 
